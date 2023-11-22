@@ -12,8 +12,8 @@ const updateCumulativeScore = (rolls, frames, cumulativeScores, pins, lastScore)
 
   if ((!isEven(rolls) && !isStrike(lastScore) && !isSpare(pins.slice(-1)[0], lastScore)) || isBonusRoll(rolls)) {
     const frameScore = isBonusRoll(rolls) ?
-      frames[getFrameIndex(frames)].slice(-1)[0] + frames[getFrameIndex(frames)].slice(-2)[0] + lastScore
-      : frames[getFrameIndex(frames)].slice(-1)[0] + lastScore
+      frames[frames.length - 1].slice(-1)[0] + frames[frames.length - 1].slice(-2)[0] + lastScore
+      : frames[frames.length - 1].slice(-1)[0] + lastScore
 
     if (isStrike(pins.slice(-1)[0]) && !isStrike(pins.slice(-2)[0]) && rolls === 19) return cumulativeScores
     if (isStrike(pins.slice(-2)[0]) && rolls > 2 && rolls < 20) {

@@ -6,8 +6,8 @@ const updateFrames = (rolls, lastScore, frames) => {
   if (isEven(rolls) && !isBonusRoll(rolls)) {
     return frames.concat([[lastScore]])
   } else {
-    const newFrameScore = frames[getFrameIndex(frames)].concat([lastScore])
-    return frames.slice(0, getFrameIndex(frames)).concat([newFrameScore])
+    const newFrameScore = frames[frames.length - 1].concat([lastScore])
+    return frames.slice(0, frames.length - 1).concat([newFrameScore])
   }
 }
 
