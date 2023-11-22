@@ -1,0 +1,40 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Restart {
+    width: 100px;
+    border-radius: 15px;
+    height: 35px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: red;
+    border-color: red;
+    background-color: transparent;
+  }
+  
+  .Restart:hover {
+    background-color: red;
+    color: white;
+    opacity: 0.9;
+  }
+  
+  button {
+    width: auto;
+    height: 30px;
+    margin: 10px;
+    background-color: rgb(81, 81, 234);
+    color: white;
+    font-size: 12px;
+  }
+  
+  button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .image_style{
+    width:50px;
+    border-radius: 50%;
+  }
+  
